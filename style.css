@@ -1,0 +1,182 @@
+*{
+	margin:0px;
+	padding:0px;
+	
+	list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+:root {
+    --animation-speed: 300ms;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+	background-image: url("Slice 1.png");
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000,.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--animation-speed) all;
+    cursor: pointer;
+}
+.sticky{
+	position:sticky;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 9;
+    border-right: 1px solid #ddd;
+    transform: translateX(-100%);
+    transition: var(--animation-speed) transform;
+}
+.menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+.menu ul li a {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    color: #333;
+}
+
+.container {
+    height: 100%;
+ 
+    transition: var(--animation-speed) transform;
+}
+.container .header {
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+.container .actions {
+    margin-left: auto;
+}
+.container .logo {
+    color: #222;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+
+.hamburger-menu {
+    --height: 4px;
+    --space: calc(var(--height) * 2.5);
+    --animation-speed: 300ms;
+    width: calc(var(--space) * 4);
+    height: calc(var(--height) + (var(--space) * 2));
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+.hamburger-menu span,
+.hamburger-menu span::before,
+.hamburger-menu span::after {
+    content: '';
+    display: block;
+    height: var(--height);
+    width: 100%;
+    background: #222;
+}
+.hamburger-menu span {
+    transform: translateY(var(--space));
+    transition: var(--animation-speed) var(--animation-speed) background-color,width 2s;
+}
+.hamburger-menu span::before {
+    position: absolute;
+    bottom: var(--space);
+    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom,width 1.5s;
+}
+.hamburger-menu span::after {
+    position: absolute;
+    top: var(--space);
+    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top,width 1.5s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ nav.menu {
+    transform: translateX(0);
+}
+#menu-toggle:checked ~ .container {
+    transform: translateX(300px);
+}
+
+#menu-toggle:checked ~ .container .hamburger-menu span {
+	
+    width:1000px;
+    transition: var(--animation-speed)  background-color,width 2s;
+}
+#menu-toggle:checked ~ .container .hamburger-menu span::before {
+  width:1000px;
+    
+    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom,width 2.5s;
+}
+#menu-toggle:checked ~ .container .hamburger-menu span::after {
+  width:1000px;
+    
+    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
+}
+.animate-text {
+	color:#94a1b2;
+    float:left;
+	padding-left:500px;
+	padding-top:40px;
+	font-size:30px;
+	animation: fade-in-down 1.5s  ease-out ;
+	
+}
+.hiza{
+	float:right;
+	padding-top:30px;
+	padding-right:490px;
+	animation: shake  1s ease-out infinite ;
+}
+@keyframes fade-in-down {
+  from {
+	
+    transform: translate3d(0, -300%, 0);
+  }
+
+  to {
+	 
+    transform: translate3d(0, 0 , 0);
+  }
+}
+
+@keyframes shake{
+  from {
+	
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+	 
+    transform: translate3d(0, 30% , 0);
+  }
+}
