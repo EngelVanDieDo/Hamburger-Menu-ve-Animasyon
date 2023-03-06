@@ -14,4 +14,7 @@ const options = {
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
-
+function kaydir() {
+var div = document.getElementById("gt");
+  div.style.transform = "translateX(0px)";
+}

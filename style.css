@@ -19,6 +19,7 @@ html, body {
     height: 100%;
     overflow-x: hidden;
 	background-image: url("Slice 1.png");
+	height: 2000px;
 }
 .backdrop {
     position: fixed;
@@ -32,9 +33,7 @@ html, body {
     transition: var(--animation-speed) all;
     cursor: pointer;
 }
-.sticky{
-	position:sticky;
-}
+
 .menu {
     position: fixed;
     top: 0;
@@ -61,32 +60,14 @@ html, body {
 	opacity:0.5;
 	
 }
-
-.container {
-    height: 2000px;
- 
-    transition: var(--animation-speed) transform;
-}
-.container .header {
+.header {
     height: 54px;
-
+ transition: var(--animation-speed) transform;
     display: flex;
     align-items: center;
 
     padding: 0 20px;
 }
-.container .actions {
-    margin-left: auto;
-}
-.container .logo {
-    color: #222;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-
 
 .hamburger-menu {
     --height: 4px;
@@ -100,9 +81,14 @@ html, body {
 }
 .menu ul li:hover a{
 	opacity:1;
-	
+}
+
+.menu ul li:last-child {
+  position: absolute;
+  bottom: 0;
 	
 }
+
 .hamburger-menu span,
 .hamburger-menu span::before,
 .hamburger-menu span::after {
@@ -134,40 +120,57 @@ html, body {
 #menu-toggle:checked ~ nav.menu {
     transform: translateX(0);
 }
-#menu-toggle:checked ~ .container {
+#menu-toggle:checked ~ .header {
     transform: translateX(300px);
 }
 
-#menu-toggle:checked ~ .container .hamburger-menu span {
+#menu-toggle:checked ~  .header span {
+	
+   width:1000px;
+    transition: var(--animation-speed)  background-color,width 2s;
+}
+#menu-toggle:checked ~ .header .hamburger-menu span::before {
+   width:1000px;
+    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom,width 2.5s;
+	
+}
+#menu-toggle:checked ~ .header .hamburger-menu span::after {
+ width:1000px;
+    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
+	
+}
+/*Tıklandığında x şeklini yaptırmak için gereken kodlar:
+#menu-toggle:checked ~  .header span {
 	
     background:transparent;
     transition: var(--animation-speed)  background-color,width 2s;
 }
-#menu-toggle:checked ~ .container .hamburger-menu span::before {
+#menu-toggle:checked ~ .header .hamburger-menu span::before {
     bottom:0;
 	transform:rotate(-45deg);
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom,width 2.5s;
-	background:#fff;
+	
 }
-#menu-toggle:checked ~ .container .hamburger-menu span::after {
+#menu-toggle:checked ~ .header .hamburger-menu span::after  {
   top:0;
   transform:rotate(45deg);
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
-	background:#fff;
-}
+	
+	}
+*/
 .animate-text {
 	color:#94a1b2;
     float:left;
-	padding-left:500px;
-	padding-top:40px;
+	padding-left:38.3%;
+	padding-top:3.6%;
 	font-size:30px;
 	animation: fade-in-down 1.5s  ease-out ;
 	
 }
 .hiza{
 	float:right;
-	padding-top:30px;
-	padding-right:490px;
+	padding-top:3%;
+	padding-right:37.5%;
 	animation: shake  1s ease-out infinite ;
 }
 @keyframes fade-in-down {
@@ -193,3 +196,4 @@ html, body {
     transform: translate3d(0, 30% , 0);
   }
 }
+
