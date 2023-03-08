@@ -14,7 +14,18 @@ const options = {
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
+
 function kaydir() {
 var div = document.getElementById("gt");
   div.style.transform = "translateX(0px)";
 }
+
+function removeChecked() {
+			var checkbox = document.getElementById("menu-toggle");
+			if (checkbox.checked) {
+				checkbox.checked = false;
+			}
+}
+function scrollToLink() {
+			window.scrollBy(0, 0);
+		}

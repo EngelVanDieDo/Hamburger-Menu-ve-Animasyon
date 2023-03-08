@@ -20,12 +20,13 @@
 <div class="hiza"><img src="down-arrow (1).png"alt="ewgw"></div>
 <!--Yan menü-->
 <nav class="menu">
+<!--Eklediğin her listeye bu kodu eklemeyi unutma!(onclick="removeChecked()")-->
     <ul>
         <li>
-            <a href="#">Hakkımda</a>
+            <a href="#" onclick="removeChecked()">Hakkımda</a>
         </li>
         <li>
-            <a href="#">Ewagewg<br>Saati</a>
+            <a href="#" onclick="scrollToLink(),removeChecked()">Ewagewg<br>Saati</a>
         </li>
 		<li>
 
@@ -58,10 +59,11 @@
 
 		</li>
 		<li>
-		<a href="#" onclick="window.scrollBy(0, 0)">Başa Dön</a>
+		<a href="#" onclick="window.scrollBy(0, 0),removeChecked()">Başa Dön</a>
 		</li>
 	
     </ul>
+	
 </nav>
  </body>
  <!--Dark mode-->

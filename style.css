@@ -113,7 +113,7 @@ html, body {
 }
 
 #menu-toggle {
-    display: none;
+    display:none;
 }
 
 #menu-toggle:checked ~ nav.menu {
@@ -250,4 +250,5 @@ html, body {
   }
 
 }
+
 
