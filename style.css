@@ -16,10 +16,10 @@
 }
 
 html, body {
-    height: 100%;
+
     overflow-x: hidden;
 	background-image: url("Slice 1.png");
-	height: 2000px;
+	height: 170%;
 }
 .backdrop {
     position: fixed;
@@ -40,7 +40,6 @@ html, body {
     left: 0;
     width: 300px;
     height: 100%;
-    z-index: 9;
     border-inline: 5px solid #16161A;
 	border-top-right-radius:25px;
 	border-bottom-right-radius:25px;
@@ -139,7 +138,7 @@ html, body {
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
 	
 }
-/*Tıklandığında x şeklini yaptırmak için gereken kodlar:
+/*Tıklandığında x şeklini yaptırmak için gereken kodlar(@media screen 800-550px olduğu zaman spanlar menünü arkasında kalıyo bunu kullanabilmek için önce onun çözülmesi gerek):
 #menu-toggle:checked ~  .header span {
 	
     background:transparent;
@@ -173,6 +172,7 @@ html, body {
 	padding-right:37.5%;
 	animation: shake  1s ease-out infinite ;
 }
+
 @keyframes fade-in-down {
   from {
 	
@@ -195,5 +195,59 @@ html, body {
 	 
     transform: translate3d(0, 30% , 0);
   }
+}
+@media (max-width: 550px) {
+  .menu{
+	  width: 100px;
+  
+  }
+  .menu ul li a{
+	  font-size:12px; 
+  }
+  .hamburger-menu{
+	  --height: 3px;
+  }
+  #menu-toggle:checked ~ .header {
+    transform: translateX(90px);
+  }
+   .animate-text{
+	   font-size:18px;
+	   padding-left:30.3%;
+	   text-align:left;
+
+   }
+   .hiza img {
+	   width:40px;
+   }
+   .hiza{
+	
+	padding-right:25.8%;
+	
+    }
+}
+@media (max-width: 800px) {
+	.animate-text{
+	   font-size:25px;
+	   padding-left:50.3%;
+   }
+      .hiza img {
+	   width:50px;
+   }
+   .hiza{
+	
+	padding-right:23.8%;
+	
+    }
+	  .hamburger-menu{
+	  --height: 3.5px;
+  }
+  .menu{
+	  width: 250px;
+    
+  }
+  #menu-toggle:checked ~ .header {
+    transform: translateX(90px);
+  }
+
 }
 
