@@ -18,8 +18,10 @@
 html, body {
 
     overflow-x: hidden;
-	background-image: url("Slice 1.png");
-	height: 170%;
+	background-image: url("Slice 1 (2).png");
+	background-repeat: no-repeat;
+    background-size: cover;
+	height: 2048px;
 }
 .backdrop {
     position: fixed;
@@ -196,10 +198,247 @@ html, body {
     transform: translate3d(0, 30% , 0);
   }
 }
-@media (max-width: 550px) {
-  .menu{
-	  width: 100px;
+
+/*2.sayfa-----------------------------------------------*/
+.ayırıcı {
+	width:100%;
+	height:5%;
+
+	float:right;
+	position:absolute;
+	top:127%;
+}
+.dsads {
+
+  margin: 0px;  
+  height: 100px;
+
+  display: grid;
+  place-items: center;
+  position:absolute;
+  top:185%;
+  right:30%;
   
+}
+
+.card-groups,
+.card-group,
+.card {
+  aspect-ratio: 5 / 7;
+}
+
+.card-groups,
+.card-group,
+.big-card {  
+  width: 30vmin;
+}
+
+.card-group {
+  position: absolute;
+  transition: transform 400ms ease;
+}
+
+.card-group[data-status="unknown"] {
+  transform: scale(0);
+  transition: none;
+}
+
+.card-group[data-status="active"] {
+  transition-delay: 300ms;
+}
+
+.card-group[data-status="after"] {
+  transform: translateX(50%) scale(0);
+}
+
+.card-group[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+
+.card-group[data-status="becoming-active-from-after"] {
+  transform: translateX(50%) scale(0);
+  transition: none;
+}
+
+.card-group[data-status="becoming-active-from-before"] {
+  transform: translateX(-50%) scale(0);
+  transition: none;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
+  
+  background-position: center;
+  background-size: cover;
+}
+
+.big-card {
+  border-radius: 1vmin;
+}
+
+.little-card {
+  width: 12vmin;
+  border-radius: 2vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -1vmin 1vmin 2vmin rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.big-card:nth-child(2) {
+ background-image: url("foto7.jpeg");
+  transform: translateX(-10%) rotate(-1deg);
+}
+
+.big-card:nth-child(4) {
+ background-image: url("foto2.jpeg");
+  transform: rotate(2deg);
+}
+
+.big-card:nth-child(6) {
+ background-image: url("foto9.jpeg");
+  transform: translateX(-6%) rotate(-3deg);
+}
+
+.big-card:nth-child(8) {
+ background-image: url("foto8.jpeg");
+  transform: translate(10%, 3%) rotate(5deg);
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(6) {
+background-image: url("foto8.jpeg");
+}
+
+.card-group[data-index="1"] > .big-card:nth-child(8) {
+   background-image: url("foto9.jpeg");
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(4)  {
+     background-image: url("foto2.jpeg");
+}
+
+.card-group[data-index="2"] > .big-card:nth-child(8){
+     background-image: url("foto2.jpeg");
+}
+
+.little-card:nth-child(1) {
+    background-image: url("foto6.jpeg");
+}
+
+.little-card:nth-child(3) {
+   background-image: url("foto3.jpeg");
+}
+
+.little-card:nth-child(5) {
+  background-image: url("foto1.jpeg");
+}
+
+.little-card:nth-child(7) {
+  background-image: url("foto5.jpeg");
+}
+
+.card-group:hover > .card {  
+  box-shadow: -2vmin 2vmin 3vmin rgba(0, 0, 0, 0.4);
+}
+
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-130%, 28%) rotate(-24deg);
+}
+
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-40%, 6%) rotate(-16deg);
+}
+
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(40%, 6%) rotate(11deg);
+}
+
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(120%, 24%) rotate(25deg);
+}
+
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(280%, -180%) rotate(-15deg);
+}
+
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(200%, 200%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, -190%) rotate(15deg);
+}
+
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-220%, 200%) rotate(-15deg);
+}
+
+.card-swiper-buttons {
+  margin-top: 8vmin;
+  display: flex;
+  justify-content: space-around;  
+  padding: 0vmin 4vmin;
+}
+
+.card-swiper-buttons > button {
+  font-size: 2.5vmin;
+  border: 0.4vmin solid rgb(200, 200, 200);
+  border-radius: 100%;
+  color: white;
+  background-color: transparent;
+  height: 7vmin;
+  width: 7vmin;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+#love-button {
+  color: rgb(33, 150, 243);
+  border-color: rgb(33, 150, 243);
+}
+.imghz{
+	width:25px;
+	height:24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 550px) {
+  
+#menu-toggle:checked ~ .header .hamburger-menu {
+   
+   margin-left:-175px;
+  }
+  .menu{
+	  width: 130px;
+    
   }
   .menu ul li a{
 	  font-size:12px; 
@@ -207,9 +446,7 @@ html, body {
   .hamburger-menu{
 	  --height: 3px;
   }
-  #menu-toggle:checked ~ .header {
-    transform: translateX(90px);
-  }
+
    .animate-text{
 	   font-size:18px;
 	   padding-left:30.3%;
@@ -224,6 +461,10 @@ html, body {
 	padding-right:25.8%;
 	
     }
+	.imghz{
+	width:15px;
+	height:14px;
+}
 }
 @media (max-width: 800px) {
 	.animate-text{
@@ -242,13 +483,23 @@ html, body {
 	  --height: 3.5px;
   }
   .menu{
-	  width: 250px;
+	  width: 130px;
     
   }
-  #menu-toggle:checked ~ .header {
-    transform: translateX(90px);
+#menu-toggle:checked ~ .header .hamburger-menu {
+   
+   margin-left:-175px;
   }
-
+  .menu ul li a{
+	  font-size:12px; 
+  }
+.imghz{
+	width:20px;
+	height:19px;
 }
+}
+
+
+
 
 
