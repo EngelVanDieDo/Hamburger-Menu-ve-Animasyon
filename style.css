@@ -47,8 +47,6 @@
     transform: translateX(-100%);
     transition: var(--animation-speed) transform;
 	background:#16161A;
-	
-	
 }
 
 .menu ul li a {
@@ -65,7 +63,6 @@
  transition: var(--animation-speed) transform;
     display: flex;
     align-items: center;
-
     padding: 0 20px;
 }
 
@@ -77,8 +74,6 @@
     height: calc(var(--height) + (var(--space) * 2));
     display: block;
     cursor: pointer;
-   
-	
 }
 
 .menu ul li:hover a{
@@ -88,8 +83,7 @@
 
 .menu ul li:last-child {
   position: absolute;
-  bottom: 0;
-	
+  bottom: 0;	
 }
 
 .hamburger-menu span,
@@ -100,7 +94,6 @@
     height: var(--height);
     width: 100%;
     background: #222;
-	
 }
 .hamburger-menu span {
     transform: translateY(var(--space));
@@ -124,26 +117,20 @@
     height: var(--height);
     width: 100%;
     background: #222;
-	
 }
 .altbutton span {
     transform: translateY(var(--space));
     transition: all 1s;
-	
-	  
 }
 .altbutton span::before {
     position: absolute;
     bottom: var(--space);
-    transition: all 1s;
-	  
-	    
+    transition: all 1s;   
 }
 .altbutton span::after {
     position: absolute;
     top: var(--space);
     transition: all 1s;
-
 }
 
 #menu-toggle {
@@ -154,15 +141,12 @@
     transform: translateX(0);
 }
 #menu-toggle:checked ~ nav.menu .altbutton{
-	
    	left:-250%;
 }
 nav.menu a .altbutton span:hover{
-	
 scale:1.5;
 }
 nav.menu a .altbutton:hover span{
-	
 scale:1.5;
 }
 #menu-toggle:checked ~ .header {
@@ -170,23 +154,19 @@ scale:1.5;
 }
 
 #menu-toggle:checked ~  .header span {
-	
    width:1000px;
     transition: var(--animation-speed)  background-color,width 2s;
 }
 #menu-toggle:checked ~ .header .hamburger-menu span::before {
    width:1000px;
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom,width 2.5s;
-	
 }
 #menu-toggle:checked ~ .header .hamburger-menu span::after {
  width:1000px;
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
-	
 }
 /*Tıklandığında x şeklini yaptırmak için gereken kodlar:
 #menu-toggle:checked ~  .header span {
-	
     background:transparent;
     transition: var(--animation-speed)  background-color,width 2s;
 }
@@ -194,13 +174,11 @@ scale:1.5;
     bottom:0;
 	transform:rotate(-45deg);
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom,width 2.5s;
-	
 }
 #menu-toggle:checked ~ .header .hamburger-menu span::after  {
   top:0;
   transform:rotate(45deg);
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
-	
 	}
 */
 .animate-text {
@@ -210,7 +188,6 @@ scale:1.5;
 	padding-top:3.6%;
 	font-size:30px;
 	animation: fade-in-down 1.5s  ease-out ;
-	
 }
 .hiza{
 	float:right;
@@ -221,23 +198,19 @@ scale:1.5;
 
 @keyframes fade-in-down {
   from {
-	
     transform: translate3d(0, -300%, 0);
   }
 
   to {
-	 
     transform: translate3d(0, 0 , 0);
   }
 }
 @keyframes shake{
   from {
-	
     transform: translate3d(0, 0, 0);
   }
 
   to {
-	 
     transform: translate3d(0, 30% , 0);
   }
 }
@@ -251,16 +224,13 @@ scale:1.5;
 }
 /*2.sayfa-----------------------------------------------*/
 .dsads {
-
   margin: 0px;  
   height: 100px;
-
   display: grid;
   place-items: center;
   position:absolute;
   top:165%;
   right:30%;
-  
 }
 
 .card-groups,
@@ -311,7 +281,6 @@ scale:1.5;
   background-color: rgba(255, 255, 255, 0.05);
   position: absolute;
   transition: transform 800ms cubic-bezier(.05,.43,.25,.95);
-  
   background-position: center;
   background-size: cover;
 }
@@ -452,7 +421,6 @@ background-image: url("foto8.jpeg");
    cursor:pointer;
 	position:absolute;
 	top:240%;
-
 }
 .it1{
 	width:100%;
@@ -550,7 +518,6 @@ line-height:60px;
 	cursor:pointer;
 	transform: translateX(630%);
 	transition:all 1s ease-out;
-	
 }
 
 
