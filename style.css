@@ -449,7 +449,7 @@ background-image: url("foto8.jpeg");
 .ayırıcı {
 	width:100%;
 	height:20%;
-   
+   cursor:pointer;
 	position:absolute;
 	top:240%;
 
@@ -582,53 +582,90 @@ line-height:60px;
    
    margin-left:-175px;
   }
-  .menu{
+.menu{
 	  width: 130px;
     
   }
-  .menu ul li a{
+.menu ul li a{
 	  font-size:12px; 
   }
-  .hamburger-menu{
+.hamburger-menu{
 	  --height: 3px;
   }
-
-   .animate-text{
+.animate-text{
 	   font-size:18px;
 	   padding-left:30.3%;
 	   text-align:left;
-
    }
-   .hiza img {
+.hiza img {
 	   width:40px;
    }
-   .hiza{
-	
+.hiza{
 	padding-right:25.8%;
-	
     }
-	.imghz{
+.imghz{
 	width:15px;
 	height:14px;
 }
+.altbutton{
+	top:90.5%;
+	left:-140%;
 }
-@media (max-width: 800px) {
-	.animate-text{
+#menu-toggle:checked ~ nav.menu .altbutton{
+   	left:-350%;
+}
+.item11{
+    margin-left:28%;
+	line-height:43px;
+}
+.item1{
+    
+	line-height:43px;
+}
+.item22{
+    margin-left:22%;
+	line-height:43px;
+
+}
+.item2{
+ 
+	line-height:43px;
+
+}
+.item1:hover{
+line-height:48px;
+font-size:18px;
+}
+.item11:hover{
+font-size:18px;
+line-height:48px;
+}
+.item2:hover{
+font-size:18px;
+line-height:48px;
+}
+.item22:hover{
+line-height:48px;
+font-size:18px;
+}
+}
+@media (max-width: 800px) and (min-width: 551px) {
+.animate-text{
 	   font-size:25px;
 	   padding-left:50.3%;
    }
-      .hiza img {
+.hiza img {
 	   width:50px;
    }
-   .hiza{
+.hiza{
 	
 	padding-right:23.8%;
 	
     }
-	  .hamburger-menu{
+.hamburger-menu{
 	  --height: 3.5px;
   }
-  .menu{
+.menu{
 	  width: 130px;
     
   }
@@ -636,12 +673,70 @@ line-height:60px;
    
    margin-left:-175px;
   }
-  .menu ul li a{
+.menu ul li a{
 	  font-size:12px; 
   }
 .imghz{
 	width:20px;
 	height:19px;
+}
+.altbutton{
+	top:90.5%;
+	left:-136%;
+}
+.item11{
+    margin-left:28%;
+
+}
+.item22{
+    margin-left:22%;
+
+}
+.item1:hover{
+line-height:48px;
+font-size:22px;
+}
+.item11:hover{
+font-size:22px;
+line-height:48px;
+}
+.item2:hover{
+font-size:22px;
+line-height:48px;
+}
+.item22:hover{
+line-height:48px;
+font-size:22px;
+}
+#menu-toggle:checked ~ nav.menu .altbutton{
+   	left:-350%;
+}
+}
+@media (max-width: 1150px) and (min-width: 801px){
+.item11{
+    margin-left:28%;
+
+}
+.item22{
+    margin-left:22%;
+
+}
+.item1:hover{
+line-height:48px;
+font-size:25px;
+}
+.item11:hover{
+font-size:25px;
+line-height:48px;
+}
+.item2:hover{
+font-size:25px;
+line-height:48px;
+}
+.item22:hover{
+
+line-height:48px;
+font-size:25px;
 }
 }
 

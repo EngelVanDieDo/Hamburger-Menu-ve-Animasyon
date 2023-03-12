@@ -69,36 +69,39 @@ const handleHateClick = () => {
   });
 }
 function scrollToElement(event) {
-  // Varsayılan davranışı iptal et
+
   event.preventDefault();
 
-  // Kaydırmak istediğiniz hedef elementin ID'sini buraya yazın
+
   const targetElementId = "gt";
 
-  // Hedef elementin konumunu bulun
   const targetElement = document.getElementById(targetElementId);
   const targetElementPosition = targetElement.getBoundingClientRect().top;
 
-  // Sayfayı kaydırın
   window.scroll({
     top: targetElementPosition,
     behavior: "smooth"
   });
 }
 function scrollToElement1(event) {
-  // Varsayılan davranışı iptal et
+
   event.preventDefault();
 
-  // Kaydırmak istediğiniz hedef elementin ID'sini buraya yazın
+
   const targetElementId = "cardid";
 
-  // Hedef elementin konumunu bulun
+
   const targetElement = document.getElementById(targetElementId);
   const targetElementPosition = targetElement.getBoundingClientRect().top;
 
-  // Sayfayı kaydırın
+
   window.scroll({
     top: targetElementPosition,
     behavior: "smooth"
   });
 }
+var h5mzaölsün= document.getElementById("ayırıcı");
+h5mzaölsün.addEventListener('click', function(e) {
+  var tıklananIcerik = e.target.textContent;
+  console.log(tıklananIcerik); 
+});
