@@ -14,15 +14,14 @@
 :root {
     --animation-speed: 300ms;
 }
-
-html, body {
-
-    overflow-x: hidden;
+.içerik{
+	overflow-x: hidden;
 	background-image: url("Slice 1 (2).png");
 	background-repeat: no-repeat;
     background-size: cover;
 	height: 2048px;
 }
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -78,10 +77,13 @@ html, body {
     height: calc(var(--height) + (var(--space) * 2));
     display: block;
     cursor: pointer;
-    position: relative;
+   
+	
 }
+
 .menu ul li:hover a{
 	opacity:1;
+	cursor:pointer;
 }
 
 .menu ul li:last-child {
@@ -98,20 +100,50 @@ html, body {
     height: var(--height);
     width: 100%;
     background: #222;
+	
 }
 .hamburger-menu span {
     transform: translateY(var(--space));
-    transition: var(--animation-speed) var(--animation-speed) background-color,width 2s;
+    transition: var(--animation-speed) var(--animation-speed) background-color,width,scale 2s;
 }
 .hamburger-menu span::before {
     position: absolute;
     bottom: var(--space);
-    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom,width 1.5s;
+    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom,width,scale 1.5s;
 }
 .hamburger-menu span::after {
     position: absolute;
     top: var(--space);
-    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top,width 1.5s;
+    transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top,width,scale 1.5s;
+}
+.altbutton span,
+.altbutton span::before,
+.altbutton span::after {
+    content: '';
+    display: block;
+    height: var(--height);
+    width: 100%;
+    background: #222;
+	
+}
+.altbutton span {
+    transform: translateY(var(--space));
+    transition: all 1s;
+	
+	  
+}
+.altbutton span::before {
+    position: absolute;
+    bottom: var(--space);
+    transition: all 1s;
+	  
+	    
+}
+.altbutton span::after {
+    position: absolute;
+    top: var(--space);
+    transition: all 1s;
+
 }
 
 #menu-toggle {
@@ -120,6 +152,18 @@ html, body {
 
 #menu-toggle:checked ~ nav.menu {
     transform: translateX(0);
+}
+#menu-toggle:checked ~ nav.menu .altbutton{
+	
+   	left:-250%;
+}
+nav.menu a .altbutton span:hover{
+	
+scale:1.5;
+}
+nav.menu a .altbutton:hover span{
+	
+scale:1.5;
 }
 #menu-toggle:checked ~ .header {
     transform: translateX(300px);
@@ -140,7 +184,7 @@ html, body {
     transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top,width 2.5s;
 	
 }
-/*Tıklandığında x şeklini yaptırmak için gereken kodlar(@media screen 800-550px olduğu zaman spanlar menünü arkasında kalıyo bunu kullanabilmek için önce onun çözülmesi gerek):
+/*Tıklandığında x şeklini yaptırmak için gereken kodlar:
 #menu-toggle:checked ~  .header span {
 	
     background:transparent;
@@ -186,7 +230,6 @@ html, body {
     transform: translate3d(0, 0 , 0);
   }
 }
-
 @keyframes shake{
   from {
 	
@@ -198,16 +241,15 @@ html, body {
     transform: translate3d(0, 30% , 0);
   }
 }
-
-/*2.sayfa-----------------------------------------------*/
-.ayırıcı {
-	width:100%;
-	height:5%;
-
-	float:right;
-	position:absolute;
-	top:127%;
+@keyframes gradient {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 100%;
+  }
 }
+/*2.sayfa-----------------------------------------------*/
 .dsads {
 
   margin: 0px;  
@@ -216,7 +258,7 @@ html, body {
   display: grid;
   place-items: center;
   position:absolute;
-  top:185%;
+  top:165%;
   right:30%;
   
 }
@@ -404,8 +446,112 @@ background-image: url("foto8.jpeg");
 	width:25px;
 	height:24px;
 }
+.ayırıcı {
+	width:100%;
+	height:20%;
+   
+	position:absolute;
+	top:240%;
 
+}
+.it1{
+	width:100%;
+	height:50%
+}
+.it2{
+	width:100%;
+	height:50%
+}
+.item1{
+  margin-left:0.2%;
+	display:inline-block;
+	width:15.3%;
+    line-height:50px;
+	height:77.370%;
+	background:transparent;
+	border-inline: 5px solid gray;
+	border-radius:15px;
+    text-align:center;
+	transition: all 0.5s;
+	color:#94A1B2;
+}
+.item2{
+	margin-left:0.3%;
+	display:inline-block;
+	width:15.3%;
+    line-height:50px;
+	height:77.370%;
+	background:transparent;
+	border-inline: 5px solid gray;
+	border-radius:15px;
+	text-align:center;
+    transition: all 0.5s;
+	color:#94A1B2;
+}
+.item11{
+    margin-left:37%;
+	display:inline-block;
+	width:15.3%;
+    line-height:50px;
+	height:77.370%;
+	background:transparent;
+	border-inline: 5px solid gray;
+	border-radius:15px;
+	text-align:center;
+	text-bottom:5px;
+	transition: all 0.5s;
+    color:#94A1B2;
+}
+.item22{
+    margin-left:31%;
+	display:inline-block;
+	width:15.3%;
+	line-height:50px;
+	background:transparent;
+	border-inline: 5px solid gray;
+	height:77.370%;
+	border-radius:15px;
+	text-align:center;
+	transition: all 0.5s;	
+	color:gray;
+}
 
+.item1:hover{
+ background:RGB(179, 183, 194,0.25);
+line-height:60px;/*Hover olduğu zaman saatlerin aşşağı inmesini engellemek için değerini düşür*/
+ font-size:30px;
+}
+.item11:hover{
+ background:RGB(179, 183, 194,0.25);
+line-height:60px;
+ font-size:30px;
+}
+.item2:hover{
+ background:RGB(179, 183, 194,0.25);
+line-height:60px;
+ font-size:30px;
+}
+.item22:hover{
+ background:RGB(179, 183, 194,0.25);
+line-height:60px;
+ font-size:30px;
+}
+.altbutton{
+	position:absolute;
+	top:90.5%;
+	width:48px;
+	height:48px;
+	justify-content:center;
+    display:flex;
+    align-items:center;
+	border-inline:1px solid transparent;
+	border-radius:50px;
+	left:7%;
+	cursor:pointer;
+	transform: translateX(630%);
+	transition:all 1s ease-out;
+	
+}
 
 
 

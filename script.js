@@ -15,10 +15,7 @@ const options = {
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
 
-function kaydir() {
-var div = document.getElementById("gt");
-  div.style.transform = "translateX(0px)";
-}
+
 
 function removeChecked() {
 			var checkbox = document.getElementById("menu-toggle");
@@ -26,6 +23,13 @@ function removeChecked() {
 				checkbox.checked = false;
 			}
 }
+function activeChecked() {
+			var checkbox = document.getElementById("menu-toggle");
+			if (!checkbox.checked) {
+				checkbox.checked = true;
+			}
+}
+
 function scrollToLink() {
 			window.scrollBy(0, 0);
 		}
@@ -62,5 +66,39 @@ const handleHateClick = () => {
   setTimeout(() => {
     nextGroup.dataset.status = "active";
     activeIndex = nextIndex;
+  });
+}
+function scrollToElement(event) {
+  // Varsayılan davranışı iptal et
+  event.preventDefault();
+
+  // Kaydırmak istediğiniz hedef elementin ID'sini buraya yazın
+  const targetElementId = "gt";
+
+  // Hedef elementin konumunu bulun
+  const targetElement = document.getElementById(targetElementId);
+  const targetElementPosition = targetElement.getBoundingClientRect().top;
+
+  // Sayfayı kaydırın
+  window.scroll({
+    top: targetElementPosition,
+    behavior: "smooth"
+  });
+}
+function scrollToElement1(event) {
+  // Varsayılan davranışı iptal et
+  event.preventDefault();
+
+  // Kaydırmak istediğiniz hedef elementin ID'sini buraya yazın
+  const targetElementId = "cardid";
+
+  // Hedef elementin konumunu bulun
+  const targetElement = document.getElementById(targetElementId);
+  const targetElementPosition = targetElement.getBoundingClientRect().top;
+
+  // Sayfayı kaydırın
+  window.scroll({
+    top: targetElementPosition,
+    behavior: "smooth"
   });
 }

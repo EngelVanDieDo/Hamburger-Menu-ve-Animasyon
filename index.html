@@ -6,9 +6,9 @@
     <title>Document</title>
 	   <link rel="stylesheet" type="text/css" href="style.css">
  </head>
- <body>
+ <body><div class="içerik">
  <!--Menü açılabilmesi için icon-->
-<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="menu-toggle" >
     <div class="header" id="gt">
         <label class="hamburger-menu" for="menu-toggle">
             <span></span>
@@ -23,10 +23,10 @@
 <!--Eklediğin her listeye bu kodu eklemeyi unutma!(onclick="removeChecked()")-->
     <ul>
         <li>
-            <a href="hate-button" onclick="removeChecked()">Hakkımda</a>
+            <a onclick="scrollToElement(event),removeChecked();">Hakkımda</a>
         </li>
         <li>
-            <a href="#" onclick="scrollToLink(),removeChecked()">Ewagewg<br>Saati</a>
+           <a onclick="scrollToElement1(event),removeChecked();">Ewagewg<br>Saati</a>
         </li>
 		<li>
 
@@ -59,14 +59,32 @@
 
 		</li>
 		<li>
-		<a href="#" onclick="window.scrollBy(0, 0),removeChecked()">Başa Dön</a>
+		<a onclick="scrollToElement1(event),removeChecked();">Başa Dön </a>
 		</li>
-	
+		
     </ul>
-	
+
+	<a onclick="activeChecked()"><div class="altbutton" onclick="activeChecked()"><label class="hamburger-menu" onclick="activeChecked()" >
+            <span></span>
+        </label></div></a>
 </nav>
-<div class="ayırıcı"></div>
-<div class="dsads"><div class="card-swiper">
+	
+<div class="ayırıcı">
+<div class="it1">
+<div class="item11">21:55</div>
+<div class="item1">21:55</div>
+<div class="item1">21:55</div>
+<div class="item1">21:55</div>
+</div>
+<div class="it2">
+<div class="item22">21:55</div>
+<div class="item2">21:55</div>
+<div class="item2">21:55</div>
+<div class="item2">21:55</div>
+</div>
+</div>
+<div class="dsads" id="cardid"><div class="card-swiper">
+</div>
   <div class="card-groups">
     <div class="card-group" data-index="0" data-status="active">
       <div class="little-card card">
@@ -156,7 +174,6 @@
     </button>
   </div>
 </div>
-
 
 </div>
  </body>
