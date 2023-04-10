@@ -1,0 +1,1 @@
+<?php $db = new Erbilen\Database\BasicDB('localhost', 'uyelik', 'root', ''); ?>

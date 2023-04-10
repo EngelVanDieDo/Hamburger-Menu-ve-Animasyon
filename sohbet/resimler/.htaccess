@@ -1,0 +1,4 @@
+deny from all
+# Options +FollowSymLinks
+RewriteEngine on
+RewriteRule resim.jpg$ /resim-gizle.php   [L,NC]

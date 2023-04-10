@@ -9,13 +9,11 @@ const options = {
   buttonColorLight: '#fff', 
   saveInCookies: false, 
   label: '🌓', 
-  autoMatchOsTheme: true 
+  autoMatchOsTheme: false 
 }
 
 const darkmode = new Darkmode(options);
 darkmode.showWidget();
-
-
 
 function removeChecked() {
 			var checkbox = document.getElementById("menu-toggle");
@@ -29,12 +27,6 @@ function activeChecked() {
 				checkbox.checked = true;
 			}
 }
-
-function scrollToLink() {
-			window.scrollBy(0, 0);
-		}
-		let activeIndex = 0;
-
 const groups = document.getElementsByClassName("card-group");
 
 const handleLoveClick = () => {
@@ -84,23 +76,26 @@ function scrollToElement(event) {
   });
 }
 function scrollToElement1(event) {
-
-  event.preventDefault();
+  
+   event.preventDefault();
 
 
   const targetElementId = "cardid";
 
 
-  const targetElement = document.getElementById(targetElementId);
-  const targetElementPosition = targetElement.getBoundingClientRect().top;
+   const targetElement = document.getElementById(targetElementId);
+   const targetElementPosition = targetElement.getBoundingClientRect().top;
 
 
   window.scroll({
-    top: targetElementPosition,
-    behavior: "smooth"
+     top: targetElementPosition,
+     behavior: "smooth"
   });
 }
-var h5mzaölsün= document.getElementById("ayırıcı");
+function baglan() {
+  window.location.href = "/sohbet";
+}
+var h5mzaölsün= document.getElementById("ayır");
 h5mzaölsün.addEventListener('click', function(e) {
   var tıklananIcerik = e.target.textContent;
   console.log(tıklananIcerik); 
